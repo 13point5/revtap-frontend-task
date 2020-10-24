@@ -3,7 +3,7 @@ import { Layout, Typography } from "antd";
 
 import { CustomersView, ChartsContainer } from "./components";
 
-import rawData from "./fixtures/data.json";
+import rawData from "./fixtures/data2.json";
 
 function App() {
   return (

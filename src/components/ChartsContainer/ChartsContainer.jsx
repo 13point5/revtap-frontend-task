@@ -7,7 +7,7 @@ import { ExportOutlined } from "@ant-design/icons";
 import BarChart from "../BarChart";
 import LineChart from "../LineChart";
 
-import rawData from "../../fixtures/data.json";
+import rawData from "../../fixtures/data2.json";
 import formatOrders from "../../utils/formatOrders";
 
 const dateFormat = "YYYY-MM";
@@ -31,6 +31,8 @@ function ChartsContainer() {
     setYearMonth(dateString);
   };
 
+  console.log("orders :>> ", orders);
+
   return (
     <Row gutter={[16, 16]}>
       <Col span={24}>
@@ -40,6 +42,7 @@ function ChartsContainer() {
           <Col>
             <DatePicker
               picker="month"
+              defaultValue={moment(yearMonth, dateFormat)}
               format={dateFormat}
               onChange={handleDateChange}
             />
