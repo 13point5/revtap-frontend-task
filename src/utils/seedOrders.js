@@ -35,7 +35,7 @@ const seedOrders = (yearMonth) => {
   for (let day = 1; day <= numOfDays; day += 1) {
     const newOrder = {
       id: uuid(),
-      created: `${yearMonth}-${String(day).padStart(2, 0)}`,
+      created: `${yearMonth}-${String(day).padStart(2, 0)}T00:00:00.000Z`,
       customer: names[day],
       product: products[day],
       price: `${(Math.random() * 1000 + 100).toFixed(0)}`,
