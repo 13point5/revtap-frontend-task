@@ -1,9 +1,7 @@
 import { Layout, Row, Col, Typography } from "antd";
 import React, { useMemo } from "react";
 
-import BarChart from "./components/BarChart";
-import CustomersView from "./components/CustomersView";
-import LineChart from "./components/LineChart";
+import { BarChart, LineChart, CustomersView } from "./components";
 
 import rawData from "./fixtures/data.json";
 import formatOrders from "./utils/formatOrders";
