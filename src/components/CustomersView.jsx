@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import PropTypes from "prop-types";
 import { Table } from "antd";
 
@@ -36,10 +36,14 @@ const columns = [
 ];
 
 function CustomersView({ data }) {
-  const tableData = data.map((item) => ({
-    ...item,
-    key: item.id,
-  }));
+  const tableData = useMemo(
+    () =>
+      data.map((item) => ({
+        ...item,
+        key: item.id,
+      })),
+    [data]
+  );
 
   return <Table dataSource={tableData} columns={columns} />;
 }

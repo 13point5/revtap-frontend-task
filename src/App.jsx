@@ -1,5 +1,5 @@
 import { Layout, Row, Col, Typography } from "antd";
-import React from "react";
+import React, { useMemo } from "react";
 
 import BarChart from "./components/BarChart";
 import CustomersView from "./components/CustomersView";
@@ -9,7 +9,7 @@ import rawData from "./fixtures/data.json";
 import formatOrders from "./utils/formatOrders";
 
 function App() {
-  const orders = formatOrders(rawData.orders);
+  const orders = useMemo(() => formatOrders(rawData.orders), [rawData.orders]);
 
   return (
     <Layout style={{ padding: "2rem" }}>
