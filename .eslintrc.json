@@ -1,5 +1,6 @@
 {
   "extends": [
+    "react-app",
     "airbnb",
     "prettier",
     "prettier/react",
@@ -12,5 +13,8 @@
     "es6": true,
     "jest": true
   },
-  "plugins": ["prettier", "react", "react-hooks"]
+  "plugins": ["prettier", "react", "react-hooks"],
+  "rules": {
+    "react/jsx-props-no-spreading": "off"
+  }
 }

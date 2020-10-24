@@ -10,19 +10,23 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
-import { Card } from "antd";
+import { Card, Empty } from "antd";
 
-function BarChartView({ data }) {
+function BarChartView({ data, ...restProps }) {
   return (
-    <Card title="Orders Count">
-      <BarChart data={data} width={800} height={400}>
-        <CartesianGrid strokeDasharray="3 3" vertical={false} />
-        <XAxis dataKey="date" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Bar dataKey="amount" fill="#8884d8" />
-      </BarChart>
+    <Card title="Orders Count" {...restProps}>
+      {data.length > 0 ? (
+        <BarChart data={data} width={800} height={400}>
+          <CartesianGrid strokeDasharray="3 3" vertical={false} />
+          <XAxis dataKey="date" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey="amount" fill="#8884d8" />
+        </BarChart>
+      ) : (
+        <Empty />
+      )}
     </Card>
   );
 }

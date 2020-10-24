@@ -1,8 +1,12 @@
 import _ from "lodash";
 
-const formatOrders = (orders) => {
+const formatOrders = (orders, yearMonth) => {
+  const yearMonthOrders = orders.filter((order) =>
+    order.created.includes(yearMonth)
+  );
+
   const dateWiseOrders = _.groupBy(
-    orders,
+    yearMonthOrders,
     (order) => order.created.split("T")[0]
   );
 
