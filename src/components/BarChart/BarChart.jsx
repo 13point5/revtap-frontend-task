@@ -25,7 +25,7 @@ function BarChartView({ data, ...restProps }) {
           <Bar dataKey="count" fill="#8884d8" />
         </BarChart>
       ) : (
-        <Empty />
+        <Empty data-testid="barchart-empty" />
       )}
     </Card>
   );

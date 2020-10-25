@@ -1,7 +1,12 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import { render } from "@testing-library/react";
 
 import LineChart from "./LineChart";
+
+it("renders correctly when there is no data", () => {
+  const component = render(<LineChart data={[]} />);
+  expect(component).toMatchSnapshot();
+});
 
 it("renders correctly when there are few data points", () => {
   const data = [
@@ -26,6 +31,7 @@ it("renders correctly when there are few data points", () => {
       count: 45,
     },
   ];
-  const tree = renderer.create(<LineChart data={data} />).toJSON();
-  expect(tree).toMatchSnapshot();
+
+  const component = render(<LineChart data={data} />);
+  expect(component).toMatchSnapshot();
 });

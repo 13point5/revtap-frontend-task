@@ -1,7 +1,13 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import { render } from "@testing-library/react";
 
 import BarChart from "./BarChart";
+
+it("renders correctly when there is no data", () => {
+  const { queryByTestId } = render(<BarChart data={[]} />);
+
+  expect(queryByTestId("barchart-empty")).toBeTruthy();
+});
 
 it("renders correctly when there are few data points", () => {
   const data = [
@@ -26,6 +32,7 @@ it("renders correctly when there are few data points", () => {
       count: 45,
     },
   ];
-  const tree = renderer.create(<BarChart data={data} />).toJSON();
-  expect(tree).toMatchSnapshot();
+
+  const component = render(<BarChart data={data} />);
+  expect(component).toMatchSnapshot();
 });

@@ -31,7 +31,7 @@ function LineChartView({ data, ...restProps }) {
           />
         </LineChart>
       ) : (
-        <Empty />
+        <Empty data-testid="linechart-empty" />
       )}
     </Card>
   );
