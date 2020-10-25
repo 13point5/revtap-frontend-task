@@ -23,7 +23,7 @@ function LineChartView({ data, ...restProps }) {
           <Tooltip />
           <Legend />
           <Line
-            dataKey="count"
+            dataKey="amount"
             stroke="#8884d8"
             dot={{ r: 5 }}
             activeDot={{ r: 8 }}

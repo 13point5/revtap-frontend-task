@@ -22,7 +22,7 @@ function BarChartView({ data, ...restProps }) {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="amount" fill="#8884d8" />
+          <Bar dataKey="count" fill="#8884d8" />
         </BarChart>
       ) : (
         <Empty />
