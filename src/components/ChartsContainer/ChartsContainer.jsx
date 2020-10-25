@@ -31,8 +31,6 @@ function ChartsContainer() {
     setYearMonth(dateString);
   };
 
-  console.log("orders :>> ", orders);
-
   return (
     <Row gutter={[16, 16]}>
       <Col span={24}>
@@ -48,7 +46,14 @@ function ChartsContainer() {
             />
           </Col>
           <Col>
-            <Button type="primary" icon={<ExportOutlined />}>
+            <Button
+              type="primary"
+              icon={<ExportOutlined />}
+              href={`data:text/json;charset=utf-8,${encodeURIComponent(
+                JSON.stringify(orders)
+              )}`}
+              download={`orders-${yearMonth}.json`}
+            >
               Export Orders Data
             </Button>
           </Col>

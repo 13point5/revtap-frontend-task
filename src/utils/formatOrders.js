@@ -25,6 +25,7 @@ const formatOrders = (orders, yearMonth) => {
       date,
       amount,
       count: currOrders.length,
+      rawOrders: dateWiseOrders[date],
     });
   });
 
