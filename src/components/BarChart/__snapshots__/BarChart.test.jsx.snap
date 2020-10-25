@@ -371,7 +371,7 @@ exports[`renders correctly when there are few data points 1`] = `
                   dy="0.355em"
                   x={57}
                 >
-                  35
+                  25
                 </tspan>
               </text>
             </g>
@@ -405,7 +405,7 @@ exports[`renders correctly when there are few data points 1`] = `
                   dy="0.355em"
                   x={57}
                 >
-                  70
+                  50
                 </tspan>
               </text>
             </g>
@@ -439,7 +439,7 @@ exports[`renders correctly when there are few data points 1`] = `
                   dy="0.355em"
                   x={57}
                 >
-                  105
+                  75
                 </tspan>
               </text>
             </g>
@@ -473,7 +473,7 @@ exports[`renders correctly when there are few data points 1`] = `
                   dy="0.355em"
                   x={57}
                 >
-                  140
+                  100
                 </tspan>
               </text>
             </g>
@@ -560,7 +560,7 @@ exports[`renders correctly when there are few data points 1`] = `
             <span
               className="recharts-legend-item-text"
             >
-              amount
+              count
             </span>
           </li>
         </ul>
