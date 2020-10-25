@@ -26,12 +26,6 @@
     "eject": "react-scripts eject",
     "seed:orders": "node ./src/utils/seedOrders.js"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
