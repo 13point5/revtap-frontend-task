@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import PropTypes from "prop-types";
-import { Table } from "antd";
+import { Table, Card } from "antd";
 
 const columns = [
   {
@@ -45,7 +45,12 @@ function CustomersView({ data }) {
     [data]
   );
 
-  return <Table dataSource={tableData} columns={columns} />;
+  return (
+    <Card title="Customers">
+      {" "}
+      <Table dataSource={tableData} columns={columns} />
+    </Card>
+  );
 }
 
 CustomersView.propTypes = {
