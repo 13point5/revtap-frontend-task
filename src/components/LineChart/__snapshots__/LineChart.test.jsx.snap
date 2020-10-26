@@ -371,7 +371,7 @@ exports[`renders correctly when there are few data points 1`] = `
                   dy="0.355em"
                   x={57}
                 >
-                  25
+                  35
                 </tspan>
               </text>
             </g>
@@ -405,7 +405,7 @@ exports[`renders correctly when there are few data points 1`] = `
                   dy="0.355em"
                   x={57}
                 >
-                  50
+                  70
                 </tspan>
               </text>
             </g>
@@ -439,7 +439,7 @@ exports[`renders correctly when there are few data points 1`] = `
                   dy="0.355em"
                   x={57}
                 >
-                  75
+                  105
                 </tspan>
               </text>
             </g>
@@ -473,7 +473,7 @@ exports[`renders correctly when there are few data points 1`] = `
                   dy="0.355em"
                   x={57}
                 >
-                  100
+                  140
                 </tspan>
               </text>
             </g>
@@ -485,7 +485,7 @@ exports[`renders correctly when there are few data points 1`] = `
           <path
             className="recharts-curve recharts-line-curve"
             clipPath={null}
-            d="M65,347L308.33333333333337,321.8L551.6666666666667,33.79999999999998L795,203.00000000000003"
+            d="M65,210.7142857142857L308.33333333333337,275L551.6666666666667,179.8571428571429L795,43.571428571428555"
             fill="none"
             height={360}
             stroke="#8884d8"
@@ -554,7 +554,7 @@ exports[`renders correctly when there are few data points 1`] = `
             <span
               className="recharts-legend-item-text"
             >
-              count
+              amount
             </span>
           </li>
         </ul>
