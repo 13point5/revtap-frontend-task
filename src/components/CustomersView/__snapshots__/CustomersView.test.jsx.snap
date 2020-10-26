@@ -2,406 +2,430 @@
 
 exports[`renders correctly when there are few data points 1`] = `
 <div
-  className="ant-table-wrapper"
+  className="ant-card ant-card-bordered"
 >
   <div
-    className="ant-spin-nested-loading"
+    className="ant-card-head"
+    style={Object {}}
   >
     <div
-      className="ant-spin-container"
+      className="ant-card-head-wrapper"
     >
       <div
-        className="ant-table"
+        className="ant-card-head-title"
+      >
+        Customers
+      </div>
+    </div>
+  </div>
+  <div
+    className="ant-card-body"
+    style={Object {}}
+  >
+     
+    <div
+      className="ant-table-wrapper"
+    >
+      <div
+        className="ant-spin-nested-loading"
       >
         <div
-          className="ant-table-container"
+          className="ant-spin-container"
         >
           <div
-            className="ant-table-content"
-            onScroll={[Function]}
-            style={Object {}}
+            className="ant-table"
           >
-            <table
-              style={
-                Object {
-                  "tableLayout": "auto",
-                }
-              }
+            <div
+              className="ant-table-container"
             >
-              <colgroup />
-              <thead
-                className="ant-table-thead"
+              <div
+                className="ant-table-content"
+                onScroll={[Function]}
+                style={Object {}}
               >
-                <tr>
-                  <th
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    ID
-                  </th>
-                  <th
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    First Name
-                  </th>
-                  <th
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    Last Name
-                  </th>
-                  <th
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    Email
-                  </th>
-                  <th
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    Created
-                  </th>
-                  <th
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    Orders
-                  </th>
-                </tr>
-              </thead>
-              <tbody
-                className="ant-table-tbody"
-              >
-                <tr
-                  className="ant-table-row ant-table-row-level-0"
-                  data-row-key="0153012d-1fbd-49f2-a6c3-ddad138c2d3b"
-                  onClick={[Function]}
-                  style={Object {}}
+                <table
+                  style={
+                    Object {
+                      "tableLayout": "auto",
+                    }
+                  }
                 >
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
+                  <colgroup />
+                  <thead
+                    className="ant-table-thead"
                   >
-                    0153012d-1fbd-49f2-a6c3-ddad138c2d3b
-                  </td>
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
+                    <tr>
+                      <th
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        ID
+                      </th>
+                      <th
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        First Name
+                      </th>
+                      <th
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        Last Name
+                      </th>
+                      <th
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        Email
+                      </th>
+                      <th
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        Created
+                      </th>
+                      <th
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        Orders
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    className="ant-table-tbody"
                   >
-                    Florine
-                  </td>
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    Deckow
-                  </td>
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    Maximo_Ullrich@hotmail.com
-                  </td>
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    2020-04-29T20:07:16.125Z
-                  </td>
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    2
-                  </td>
-                </tr>
-                <tr
-                  className="ant-table-row ant-table-row-level-0"
-                  data-row-key="bf7f4255-3832-4499-b445-063307b8a59b"
-                  onClick={[Function]}
-                  style={Object {}}
-                >
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    bf7f4255-3832-4499-b445-063307b8a59b
-                  </td>
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    Lavada
-                  </td>
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    Cronin
-                  </td>
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    Cicero.Douglas9@hotmail.com
-                  </td>
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    2020-04-29T06:43:36.299Z
-                  </td>
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    2
-                  </td>
-                </tr>
-                <tr
-                  className="ant-table-row ant-table-row-level-0"
-                  data-row-key="ab560f63-18db-4925-8cbc-4703a4f70655"
-                  onClick={[Function]}
-                  style={Object {}}
-                >
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    ab560f63-18db-4925-8cbc-4703a4f70655
-                  </td>
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    Jeremy
-                  </td>
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    Reichert
-                  </td>
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    Marisa65@gmail.com
-                  </td>
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    2020-04-25T19:19:55.187Z
-                  </td>
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    1
-                  </td>
-                </tr>
-                <tr
-                  className="ant-table-row ant-table-row-level-0"
-                  data-row-key="32418bc6-aec2-4166-ac67-fc7a6107a1c5"
-                  onClick={[Function]}
-                  style={Object {}}
-                >
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    32418bc6-aec2-4166-ac67-fc7a6107a1c5
-                  </td>
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    Norval
-                  </td>
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    Corkery
-                  </td>
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    Stuart.Schmitt27@gmail.com
-                  </td>
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    2020-04-26T06:24:50.824Z
-                  </td>
-                  <td
-                    className="ant-table-cell"
-                    colSpan={null}
-                    rowSpan={null}
-                    style={Object {}}
-                  >
-                    1
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                    <tr
+                      className="ant-table-row ant-table-row-level-0"
+                      data-row-key="0153012d-1fbd-49f2-a6c3-ddad138c2d3b"
+                      onClick={[Function]}
+                      style={Object {}}
+                    >
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        0153012d-1fbd-49f2-a6c3-ddad138c2d3b
+                      </td>
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        Florine
+                      </td>
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        Deckow
+                      </td>
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        Maximo_Ullrich@hotmail.com
+                      </td>
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        2020-04-29T20:07:16.125Z
+                      </td>
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        2
+                      </td>
+                    </tr>
+                    <tr
+                      className="ant-table-row ant-table-row-level-0"
+                      data-row-key="bf7f4255-3832-4499-b445-063307b8a59b"
+                      onClick={[Function]}
+                      style={Object {}}
+                    >
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        bf7f4255-3832-4499-b445-063307b8a59b
+                      </td>
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        Lavada
+                      </td>
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        Cronin
+                      </td>
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        Cicero.Douglas9@hotmail.com
+                      </td>
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        2020-04-29T06:43:36.299Z
+                      </td>
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        2
+                      </td>
+                    </tr>
+                    <tr
+                      className="ant-table-row ant-table-row-level-0"
+                      data-row-key="ab560f63-18db-4925-8cbc-4703a4f70655"
+                      onClick={[Function]}
+                      style={Object {}}
+                    >
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        ab560f63-18db-4925-8cbc-4703a4f70655
+                      </td>
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        Jeremy
+                      </td>
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        Reichert
+                      </td>
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        Marisa65@gmail.com
+                      </td>
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        2020-04-25T19:19:55.187Z
+                      </td>
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        1
+                      </td>
+                    </tr>
+                    <tr
+                      className="ant-table-row ant-table-row-level-0"
+                      data-row-key="32418bc6-aec2-4166-ac67-fc7a6107a1c5"
+                      onClick={[Function]}
+                      style={Object {}}
+                    >
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        32418bc6-aec2-4166-ac67-fc7a6107a1c5
+                      </td>
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        Norval
+                      </td>
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        Corkery
+                      </td>
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        Stuart.Schmitt27@gmail.com
+                      </td>
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        2020-04-26T06:24:50.824Z
+                      </td>
+                      <td
+                        className="ant-table-cell"
+                        colSpan={null}
+                        rowSpan={null}
+                        style={Object {}}
+                      >
+                        1
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
+          <ul
+            className="ant-pagination ant-table-pagination ant-table-pagination-right"
+            style={Object {}}
+            unselectable="unselectable"
+          >
+            <li
+              aria-disabled={true}
+              className="ant-pagination-prev ant-pagination-disabled"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              tabIndex={null}
+              title="Previous Page"
+            >
+              <button
+                className="ant-pagination-item-link"
+                disabled={true}
+                tabIndex={-1}
+                type="button"
+              >
+                <span
+                  aria-label="left"
+                  className="anticon anticon-left"
+                  role="img"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className=""
+                    data-icon="left"
+                    fill="currentColor"
+                    focusable="false"
+                    height="1em"
+                    viewBox="64 64 896 896"
+                    width="1em"
+                  >
+                    <path
+                      d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 000 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </li>
+            <li
+              className="ant-pagination-item ant-pagination-item-1 ant-pagination-item-active"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              tabIndex="0"
+              title={1}
+            >
+              <a
+                rel="nofollow"
+              >
+                1
+              </a>
+            </li>
+            <li
+              aria-disabled={true}
+              className="ant-pagination-next ant-pagination-disabled"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              tabIndex={null}
+              title="Next Page"
+            >
+              <button
+                className="ant-pagination-item-link"
+                disabled={true}
+                tabIndex={-1}
+                type="button"
+              >
+                <span
+                  aria-label="right"
+                  className="anticon anticon-right"
+                  role="img"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className=""
+                    data-icon="right"
+                    fill="currentColor"
+                    focusable="false"
+                    height="1em"
+                    viewBox="64 64 896 896"
+                    width="1em"
+                  >
+                    <path
+                      d="M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
-      <ul
-        className="ant-pagination ant-table-pagination ant-table-pagination-right"
-        style={Object {}}
-        unselectable="unselectable"
-      >
-        <li
-          aria-disabled={true}
-          className="ant-pagination-prev ant-pagination-disabled"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          tabIndex={null}
-          title="Previous Page"
-        >
-          <button
-            className="ant-pagination-item-link"
-            disabled={true}
-            tabIndex={-1}
-            type="button"
-          >
-            <span
-              aria-label="left"
-              className="anticon anticon-left"
-              role="img"
-            >
-              <svg
-                aria-hidden="true"
-                className=""
-                data-icon="left"
-                fill="currentColor"
-                focusable="false"
-                height="1em"
-                viewBox="64 64 896 896"
-                width="1em"
-              >
-                <path
-                  d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 000 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"
-                />
-              </svg>
-            </span>
-          </button>
-        </li>
-        <li
-          className="ant-pagination-item ant-pagination-item-1 ant-pagination-item-active"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          tabIndex="0"
-          title={1}
-        >
-          <a
-            rel="nofollow"
-          >
-            1
-          </a>
-        </li>
-        <li
-          aria-disabled={true}
-          className="ant-pagination-next ant-pagination-disabled"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          tabIndex={null}
-          title="Next Page"
-        >
-          <button
-            className="ant-pagination-item-link"
-            disabled={true}
-            tabIndex={-1}
-            type="button"
-          >
-            <span
-              aria-label="right"
-              className="anticon anticon-right"
-              role="img"
-            >
-              <svg
-                aria-hidden="true"
-                className=""
-                data-icon="right"
-                fill="currentColor"
-                focusable="false"
-                height="1em"
-                viewBox="64 64 896 896"
-                width="1em"
-              >
-                <path
-                  d="M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z"
-                />
-              </svg>
-            </span>
-          </button>
-        </li>
-      </ul>
     </div>
   </div>
 </div>
