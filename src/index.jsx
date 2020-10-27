@@ -1,3 +1,6 @@
+// why-did-you-render
+import "./utils/wydr";
+
 import React from "react";
 import ReactDOM from "react-dom";
 
