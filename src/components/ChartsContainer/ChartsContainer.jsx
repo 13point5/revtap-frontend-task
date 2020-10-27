@@ -1,13 +1,11 @@
-import React, { useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import moment from "moment";
 
-import { Row, Col, Typography, DatePicker, Button, Space, Select } from "antd";
-import { ExportOutlined } from "@ant-design/icons";
-import CsvDownload from "react-json-to-csv";
+import { Row, Col, Typography, DatePicker, Space } from "antd";
 
 import BarChart from "../BarChart";
 import LineChart from "../LineChart";
-import VarParent from "../VarParent";
+import ExportData from "../ExportData";
 
 import rawData from "../../fixtures/data2.json";
 import formatOrders from "../../utils/formatOrders";
@@ -22,48 +20,16 @@ const cardStyes = {
   },
 };
 
-const ExportDataParents = {
-  json: React.Fragment,
-  csv: CsvDownload,
-};
-
-const RestProps = (orders) => ({
-  json: null,
-  csv: {
-    style: {
-      border: "none",
-      outline: "none",
-      padding: 0,
-    },
-    data: orders,
-  },
-});
-
-const ExportDataButtonProps = (orders, yearMonth) => ({
-  csv: null,
-  json: {
-    href: `data:text/json;charset=utf-8,${encodeURIComponent(
-      JSON.stringify(orders)
-    )}`,
-    download: `orders-${yearMonth}.json`,
-  },
-});
-
 function ChartsContainer() {
-  const [dataFormat, setDataFormat] = useState("json");
   const [yearMonth, setYearMonth] = useState(moment().format(dateFormat));
 
   const orders = useMemo(() => formatOrders(rawData.orders, yearMonth), [
     yearMonth,
   ]);
 
-  const handleDateChange = (_, dateString) => {
+  const handleDateChange = useCallback((_, dateString) => {
     setYearMonth(dateString);
-  };
-
-  const handleDataFormatChange = (newDataFormat) => {
-    setDataFormat(newDataFormat);
-  };
+  }, []);
 
   return (
     <Row gutter={[16, 16]}>
@@ -80,28 +46,7 @@ function ChartsContainer() {
                 onChange={handleDateChange}
               />
 
-              <VarParent
-                parent={ExportDataParents[dataFormat]}
-                {...RestProps(orders)[dataFormat]}
-              >
-                <Button
-                  type="primary"
-                  icon={<ExportOutlined />}
-                  {...ExportDataButtonProps(orders, yearMonth)[dataFormat]}
-                >
-                  Export Orders Data
-                </Button>
-              </VarParent>
-
-              <Select
-                defaultValue="json"
-                style={{ width: 80 }}
-                value={dataFormat}
-                onChange={handleDataFormatChange}
-              >
-                <Select.Option value="json">JSON</Select.Option>
-                <Select.Option value="csv">CSV</Select.Option>
-              </Select>
+              <ExportData orders={orders} yearMonth={yearMonth} />
             </Space>
           </Col>
         </Row>

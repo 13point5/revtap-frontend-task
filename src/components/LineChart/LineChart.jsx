@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 import {
   LineChart,
@@ -11,6 +10,8 @@ import {
   Legend,
 } from "recharts";
 import { Card, Empty } from "antd";
+
+import orderProptyes from "../../propTypes/orders";
 
 function LineChartView({ data, ...restProps }) {
   return (
@@ -38,13 +39,7 @@ function LineChartView({ data, ...restProps }) {
 }
 
 LineChartView.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      date: PropTypes.string,
-      amount: PropTypes.number,
-      count: PropTypes.number,
-    })
-  ).isRequired,
+  data: orderProptyes.isRequired,
 };
 
 export default LineChartView;

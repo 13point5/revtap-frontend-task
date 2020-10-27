@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 import {
   BarChart,
@@ -11,6 +10,8 @@ import {
   Legend,
 } from "recharts";
 import { Card, Empty } from "antd";
+
+import orderProptyes from "../../propTypes/orders";
 
 function BarChartView({ data, ...restProps }) {
   return (
@@ -32,13 +33,7 @@ function BarChartView({ data, ...restProps }) {
 }
 
 BarChartView.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      date: PropTypes.string,
-      amount: PropTypes.number,
-      count: PropTypes.number,
-    })
-  ).isRequired,
+  data: orderProptyes.isRequired,
 };
 
 export default BarChartView;
