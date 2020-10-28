@@ -1,11 +1,12 @@
 /* eslint-disable */
 import React, { useEffect, useRef, useState } from "react";
-import { Layout, Timeline, Typography } from "antd";
+import { Card, Col, Layout, Row, Timeline, Typography } from "antd";
 
 import { CustomersView, ChartsContainer } from "./components";
 
 import rawData from "./fixtures/data2.json";
 import DataContext from "./contexts/DataContext";
+import SectionNav from "./components/SectionNav/SectionNav";
 
 const items = [
   {
@@ -83,55 +84,45 @@ function App() {
       </Typography.Title>
 
       <DataContext.Provider value={{ rawData }}>
-        <div style={{ display: "flex" }}>
-          <div
-            style={{
-              width: "50%",
-              display: "flex",
-              flexDirection: "column",
-              gap: "0.5rem",
-            }}
-          >
-            <ChartsContainer
-              barChartRef={itemRefs.current["bar-chart"].ref}
-              lineChartRef={itemRefs.current["line-chart"].ref}
-            />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
+          <Row style={{ width: "50%" }}>
+            <Col span={24}>
+              <ChartsContainer
+                barChartRef={itemRefs.current["bar-chart"].ref}
+                lineChartRef={itemRefs.current["line-chart"].ref}
+              />
+            </Col>
 
-            <div>
+            <Col span={24}>
               <CustomersView ref={itemRefs.current["customers-view"].ref} />
-            </div>
-          </div>
+            </Col>
+          </Row>
 
-          <div
-            style={{
-              width: "50%",
-              top: 0,
-              right: 0,
-              position: "sticky",
-            }}
-          >
-            <Timeline style={{ top: 0, right: 0, position: "sticky" }}>
-              {items.map((item) => {
-                const isActiveItem = item.id === activeItem.id;
-                const color = isActiveItem ? "blue" : "black";
+          <SectionNav>
+            {items.map((item) => {
+              const isActiveItem = item.id === activeItem.id;
+              const color = isActiveItem ? "blue" : "black";
 
-                return (
-                  <Timeline.Item
-                    color={isActiveItem ? "blue" : "gray"}
-                    onClick={() => {
-                      itemRefs.current[item.id].ref.current.scrollIntoView({
-                        behavior: "smooth",
-                        block: "center",
-                      });
-                    }}
-                    style={{ color, cursor: "pointer" }}
-                  >
-                    {item.label}
-                  </Timeline.Item>
-                );
-              })}
-            </Timeline>
-          </div>
+              return (
+                <SectionNav.Item
+                  active={isActiveItem}
+                  onClick={() => {
+                    itemRefs.current[item.id].ref.current.scrollIntoView({
+                      behavior: "smooth",
+                      block: "center",
+                    });
+                  }}
+                >
+                  {item.label}
+                </SectionNav.Item>
+              );
+            })}
+          </SectionNav>
         </div>
       </DataContext.Provider>
     </Layout>

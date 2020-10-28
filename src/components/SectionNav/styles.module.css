@@ -1,0 +1,24 @@
+.container {
+  height: fit-content;
+  top: 2rem;
+  position: sticky;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  cursor: pointer;
+  color: grey;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  border-left: 4px solid #d3d3d3;
+  padding: 0.25rem 0.5rem;
+}
+
+.itemActive {
+  color: #1890ff;
+  border-color: #1890ff;
+}
