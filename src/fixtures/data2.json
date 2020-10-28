@@ -4449,13 +4449,7 @@
       "product": "Shirt",
       "price": "970"
     },
-    {
-      "id": "52315e8a-06b7-46a3-86a4-9ecfcbde5677",
-      "created": "2020-02-08T00:00:00.000Z",
-      "customer": "Dolly",
-      "product": "Shirt",
-      "price": "206"
-    },
+
     {
       "id": "d995456f-2515-4bc3-90fe-7766f6e5942a",
       "created": "2020-02-09T00:00:00.000Z",

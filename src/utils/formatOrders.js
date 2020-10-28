@@ -12,22 +12,34 @@ const formatOrders = (orders, yearMonth) => {
 
   const formattedData = [];
 
-  const orderDates = Object.keys(dateWiseOrders);
+  const [year, month] = yearMonth.split("-");
+  const numOfDays = new Date(year, month, 0).getDate();
 
-  orderDates.forEach((date) => {
-    const currOrders = dateWiseOrders[date];
+  for (let day = 1; day <= numOfDays; day += 1) {
+    const date = `${yearMonth}-${String(day).padStart(2, 0)}`;
 
-    const amount = currOrders.reduce((prev, curr) => {
-      return prev + Number(curr.price);
-    }, 0);
+    if (!dateWiseOrders[date]) {
+      formattedData.push({
+        date,
+        amount: 0,
+        count: 0,
+        rawOrders: [],
+      });
+    } else {
+      const currOrders = dateWiseOrders[date];
 
-    formattedData.push({
-      date,
-      amount,
-      count: currOrders.length,
-      rawOrders: dateWiseOrders[date],
-    });
-  });
+      const amount = currOrders.reduce((prev, curr) => {
+        return prev + Number(curr.price);
+      }, 0);
+
+      formattedData.push({
+        date,
+        amount,
+        count: currOrders.length,
+        rawOrders: dateWiseOrders[date],
+      });
+    }
+  }
 
   return formattedData;
 };

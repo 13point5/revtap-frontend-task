@@ -1,6 +1,9 @@
-import React, { useMemo } from "react";
-import PropTypes from "prop-types";
+import React, { useMemo, useContext } from "react";
+// import PropTypes from "prop-types";
 import { Table, Card } from "antd";
+
+import DataContext from "../../contexts/DataContext";
+// import useIntersect from "../../hooks/useIntersect";
 
 const columns = [
   {
@@ -35,7 +38,10 @@ const columns = [
   },
 ];
 
-function CustomersView({ data }) {
+const CustomersView = React.forwardRef((props, ref) => {
+  const { rawData } = useContext(DataContext);
+  const data = rawData.customers;
+
   const tableData = useMemo(
     () =>
       data.map((item) => ({
@@ -46,24 +52,12 @@ function CustomersView({ data }) {
   );
 
   return (
-    <Card title="Customers">
-      {" "}
-      <Table dataSource={tableData} columns={columns} />
-    </Card>
+    <div id="customers-view" ref={ref}>
+      <Card title="Customers" {...props}>
+        <Table dataSource={tableData} columns={columns} />
+      </Card>
+    </div>
   );
-}
-
-CustomersView.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string,
-      firstName: PropTypes.string,
-      lastName: PropTypes.string,
-      email: PropTypes.string,
-      created: PropTypes.string,
-      orders: PropTypes.number,
-    })
-  ).isRequired,
-};
+});
 
 export default CustomersView;
