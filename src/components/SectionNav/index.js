@@ -1,1 +1,3 @@
-export { default as SectionNav } from "./SectionNav";
+import SectionNav from "./SectionNav";
+
+export default SectionNav;

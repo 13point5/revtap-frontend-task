@@ -1,12 +1,10 @@
-/* eslint-disable */
 import React, { useEffect, useRef, useState } from "react";
-import { Card, Col, Layout, Row, Timeline, Typography } from "antd";
+import { Col, Layout, Row, Typography } from "antd";
 
-import { CustomersView, ChartsContainer } from "./components";
+import { CustomersView, ChartsContainer, SectionNav } from "./components";
 
 import rawData from "./fixtures/data2.json";
 import DataContext from "./contexts/DataContext";
-import SectionNav from "./components/SectionNav/SectionNav";
 
 const items = [
   {
@@ -106,7 +104,6 @@ function App() {
           <SectionNav>
             {items.map((item) => {
               const isActiveItem = item.id === activeItem.id;
-              const color = isActiveItem ? "blue" : "black";
 
               return (
                 <SectionNav.Item

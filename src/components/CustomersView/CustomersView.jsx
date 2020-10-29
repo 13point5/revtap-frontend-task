@@ -54,7 +54,14 @@ const CustomersView = React.forwardRef((props, ref) => {
   return (
     <div id="customers-view" ref={ref}>
       <Card title="Customers" {...props}>
-        <Table dataSource={tableData} columns={columns} />
+        <Table
+          dataSource={tableData}
+          columns={columns}
+          pagination={{
+            defaultPageSize: 5,
+            pageSizeOptions: ["5", "10", "20", "50"],
+          }}
+        />
       </Card>
     </div>
   );
