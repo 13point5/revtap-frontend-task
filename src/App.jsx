@@ -31,6 +31,7 @@ function App() {
   });
 
   const constructor = () => {
+    // init itemRefs for all items
     items.forEach((item) => {
       itemRefs.current[item.id] = {
         ref: React.createRef(),
@@ -40,10 +41,12 @@ function App() {
     });
 
     const intersectionHandler = (entries) => {
+      // update intersection ratios for all items triggered
       entries.forEach((entry) => {
         itemRefs.current[entry.target.id].ratio = entry.intersectionRatio;
       });
 
+      // find the item with largest intersection ratio
       let activeEntry = itemRefs.current[items[0].id];
 
       Object.values(itemRefs.current).forEach((itemRef) => {
@@ -52,6 +55,7 @@ function App() {
         }
       });
 
+      // update the activeItem
       if (activeEntry.ratio > activeItem.ratio) {
         setActiveItem(activeEntry);
       }
